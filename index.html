@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>韦氏智力测试 · 50 题在线版</title>
+<meta name="description" content="基于韦氏智力量表（WAIS）风格的 50 题在线智力测评：言语理解、视觉空间、流体推理、工作记忆、加工速度五大维度，测试完立即查看 IQ 分数、百分位与认知档案。">
+<meta property="og:title" content="韦氏智力测试 · 50 题在线版">
+<meta property="og:description" content="50 道题、五大认知维度、限时挑战，测完立即查看你的 IQ 分数。来挑战一下？">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ========== 首页 ========== -->
+  <section id="screen-home" class="screen">
+    <div class="container">
+      <div id="friend-banner" class="banner hidden"></div>
+      <div id="resume-banner" class="banner resume hidden"></div>
+
+      <header class="hero">
+        <div class="hero-logo">🧠</div>
+        <h1>韦氏智力测试</h1>
+        <p class="hero-sub">基于韦氏智力量表（WAIS）风格的在线测评</p>
+        <div class="chips">
+          <span class="chip">📋 50 道题</span>
+          <span class="chip">⏱ 约 25–35 分钟</span>
+          <span class="chip">🧩 5 大认知维度</span>
+          <span class="chip">💯 测完即出分</span>
+        </div>
+        <button id="btn-start" class="btn btn-primary btn-xl">开始测试</button>
+        <p class="hero-note">免费 · 无需注册 · 支持断点续测</p>
+      </header>
+
+      <h2 class="h2">五大认知维度</h2>
+      <div id="section-cards" class="cards"></div>
+
+      <h2 class="h2">测试说明</h2>
+      <ul class="rules">
+        <li>测试按 <b>5 个分测验</b> 依次进行，部分分测验<b>限时作答</b>，超时自动进入下一题并记为未答。</li>
+        <li>工作记忆分测验中，部分题目会先展示需要<b>记忆的内容</b>，随后隐藏，请凭记忆作答。</li>
+        <li>已提交的题目<b>不能返回修改</b>；中途刷新页面可从上次进度继续。</li>
+        <li>请在安静、不受打扰的环境中独立完成，以获得最准确的结果。</li>
+        <li>完成后将获得 <b>总智商（FSIQ）</b>、五大维度分数、百分位排名与认知档案。</li>
+      </ul>
+
+      <div class="disclaimer">
+        ⚠️ 本测试为娱乐性质的韦氏风格测评，用于自我了解与朋友互动，<b>不属于临床心理评估</b>，结果不作为任何诊断或决策依据。
+      </div>
+
+      <footer class="footer">韦氏智力测试 · 50 题在线版 — 托管于 GitHub Pages</footer>
+    </div>
+  </section>
+
+  <!-- ========== 分节引导 ========== -->
+  <section id="screen-intro" class="screen hidden">
+    <div class="container narrow">
+      <div id="intro-card" class="intro-card"></div>
+    </div>
+  </section>
+
+  <!-- ========== 答题 ========== -->
+  <section id="screen-quiz" class="screen hidden">
+    <div class="container narrow">
+      <div class="quiz-top">
+        <span id="quiz-section-chip" class="section-chip"></span>
+        <span id="quiz-global-progress" class="global-progress"></span>
+      </div>
+      <div class="progress-track"><div id="quiz-progress-fill" class="progress-fill"></div></div>
+      <div id="timer-wrap" class="timer-wrap hidden">
+        <div class="timer-track"><div id="timer-fill" class="timer-fill"></div></div>
+        <span id="timer-num" class="timer-num"></span>
+      </div>
+
+      <div id="memory-phase" class="memory-phase hidden">
+        <div class="memory-tag">🧠 记忆阶段</div>
+        <div id="memory-content" class="memory-content"></div>
+        <div id="memory-countdown" class="memory-countdown"></div>
+        <p class="memory-hint">请尽量记住上面的内容，稍后将被隐藏…</p>
+      </div>
+
+      <div id="question-area" class="question-card hidden">
+        <div class="question-head">
+          <span id="question-stars" class="stars" title="难度"></span>
+        </div>
+        <div id="question-text" class="question-text"></div>
+        <div id="question-task" class="question-task hidden"></div>
+        <div id="options" class="options"></div>
+        <div class="quiz-actions">
+          <button id="btn-next" class="btn btn-primary" disabled>下一题</button>
+        </div>
+      </div>
+
+      <div id="toast" class="toast hidden"></div>
+    </div>
+  </section>
+
+  <!-- ========== 结果 ========== -->
+  <section id="screen-result" class="screen hidden">
+    <div class="container">
+      <div class="result-hero">
+        <p class="result-label">你的智商分数（FSIQ）</p>
+        <div id="result-iq" class="result-iq">--</div>
+        <div id="result-classification" class="classification-badge"></div>
+        <p id="result-percentile" class="result-percentile"></p>
+      </div>
+
+      <div class="result-card">
+        <h2 class="h3">你在人群中的位置</h2>
+        <div id="bell-curve" class="bell-curve"></div>
+      </div>
+
+      <div class="result-card">
+        <h2 class="h3">认知档案 · 五大维度</h2>
+        <div id="index-bars" class="index-bars"></div>
+      </div>
+
+      <div class="result-card">
+        <h2 class="h3">分测验明细</h2>
+        <div id="section-breakdown" class="breakdown"></div>
+        <div id="result-stats" class="stats-row"></div>
+        <div id="validity-note" class="validity-note hidden"></div>
+      </div>
+
+      <div class="result-card share-card">
+        <h2 class="h3">分享成绩，挑战好友</h2>
+        <p class="share-hint">把你的成绩链接发给朋友，打开后可直接看到你的分数，让 TA 来挑战！</p>
+        <div class="share-buttons">
+          <button id="btn-copy-link" class="btn btn-primary">🔗 复制成绩链接</button>
+          <button id="btn-native-share" class="btn btn-ghost hidden">📤 更多分享方式</button>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <button id="btn-retry" class="btn btn-ghost">再测一次</button>
+      </div>
+
+      <div class="disclaimer small">
+        ⚠️ 本测试为娱乐性质的韦氏风格测评，结果仅供参考，不构成心理评估或临床诊断。
+      </div>
+      <footer class="footer">韦氏智力测试 · 50 题在线版 — 托管于 GitHub Pages</footer>
+    </div>
+  </section>
+
+</div>
+<script src="questions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
