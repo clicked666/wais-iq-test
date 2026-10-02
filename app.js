@@ -186,6 +186,7 @@
     $('quiz-global-progress').textContent = '第 ' + globalNo + ' / ' + TOTAL + ' 题';
     var answered = Object.keys(S.answers).length;
     $('quiz-progress-fill').style.width = (answered / TOTAL * 100) + '%';
+    $('btn-prev').disabled = flatIndexOf() === 0;
 
     // 计时条
     var tw = $('timer-wrap');
@@ -241,6 +242,14 @@
     } else {
       nextBtn.classList.remove('hidden');
       nextBtn.disabled = true;
+      // 返回已作答的题目时回显原选择，可直接改选
+      var prevAns = S.answers[flatIndexOf()];
+      if (prevAns && prevAns.choice !== null) {
+        S.selected = prevAns.choice;
+        var prevOpt = box.querySelectorAll('.option')[prevAns.choice];
+        if (prevOpt) prevOpt.classList.add('selected');
+        nextBtn.disabled = false;
+      }
     }
   }
 
@@ -350,10 +359,27 @@
     advance();
   }
 
-  function onTimeout() {
-    // 防抖：若刚刚已作答并等待跳转，忽略超时
+  // 返回上一题（可跨分测验）；限时题返回后重新计时
+  function goBack() {
     var idx = flatIndexOf();
-    if (S.answers[idx]) return;
+    if (idx === 0) return;
+    var target = FLAT[idx - 1];
+    S.si = SECTIONS.findIndex(function (s) { return s.key === target.sec.key; });
+    S.qi = idx - 1 - SECTION_START[target.sec.key];
+    saveState();
+    renderQuestion();
+  }
+
+  function onTimeout() {
+    var idx = flatIndexOf();
+    // 超时后禁用选项，防止延迟跳转窗口内的误点写入下一题
+    Array.prototype.forEach.call($('options').querySelectorAll('.option'), function (b) { b.disabled = true; });
+    // 已作答的题（返回重做场景）超时不覆盖原答案，直接前进
+    if (S.answers[idx]) {
+      toast('⏰ 时间到', true);
+      setTimeout(advance, 350);
+      return;
+    }
     recordAnswer(null, true);
     toast('⏰ 时间到', true);
     setTimeout(advance, 350);
@@ -614,6 +640,8 @@
       if (btns[idx] && !btns[idx].disabled) btns[idx].click();
     } else if (e.key === 'Enter' && !sec.timed && S.selected !== null) {
       onNext();
+    } else if (e.key === 'ArrowLeft' && !$('question-area').classList.contains('hidden')) {
+      goBack();
     }
   });
 
@@ -628,6 +656,7 @@
     renderIntro(0);
   };
   $('btn-next').onclick = onNext;
+  $('btn-prev').onclick = goBack;
   $('btn-retry').onclick = restart;
 
   // ---------- 启动 ----------

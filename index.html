@@ -41,7 +41,7 @@
       <ul class="rules">
         <li>测试按 <b>5 个分测验</b> 依次进行，部分分测验<b>限时作答</b>，超时自动进入下一题并记为未答。</li>
         <li>工作记忆分测验中，部分题目会先展示需要<b>记忆的内容</b>，随后隐藏，请凭记忆作答。</li>
-        <li>已提交的题目<b>不能返回修改</b>；中途刷新页面可从上次进度继续。</li>
+        <li>可点击「上一题」<b>返回修改答案</b>（限时题返回后重新计时，倒计时结束未改答则保留原答案）；中途刷新页面可从上次进度继续。</li>
         <li>请在安静、不受打扰的环境中独立完成，以获得最准确的结果。</li>
         <li>完成后将获得 <b>总智商（FSIQ）</b>、五大维度分数、百分位排名与认知档案。</li>
       </ul>
@@ -89,6 +89,7 @@
         <div id="question-task" class="question-task hidden"></div>
         <div id="options" class="options"></div>
         <div class="quiz-actions">
+          <button id="btn-prev" class="btn btn-ghost" disabled>上一题</button>
           <button id="btn-next" class="btn btn-primary" disabled>下一题</button>
         </div>
       </div>

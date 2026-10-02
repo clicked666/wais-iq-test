@@ -305,7 +305,8 @@ body {
 .option.selected .letter { background: var(--accent); color: #fff; }
 .option.flash { border-color: var(--accent); background: #e6e6fb; }
 
-.quiz-actions { display: flex; justify-content: flex-end; margin-top: 18px; }
+.quiz-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 18px; }
+#btn-prev { margin-right: auto; }
 
 .toast {
   position: fixed;
