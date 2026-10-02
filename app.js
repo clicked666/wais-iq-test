@@ -215,22 +215,40 @@
       stars += '<span class="' + (i <= q.difficulty ? '' : 'off') + '">★</span>';
     }
     $('question-stars').innerHTML = stars;
-    // 上面这行在记忆题时展示任务文案，普通题展示题干
     var taskEl = $('question-task');
     if (memR) {
+      // 回忆阶段：绝不回显含记忆内容的原题干
       taskEl.textContent = memR;
       taskEl.classList.remove('hidden');
-      $('question-text').textContent = q.text || '请凭记忆作答';
+      $('question-text').textContent = '请凭记忆作答';
+    } else if (q.image) {
+      taskEl.classList.add('hidden');
+      $('question-text').textContent = '观察图形规律，选出问号处最合适的选项：';
     } else {
       taskEl.classList.add('hidden');
       $('question-text').textContent = q.text;
     }
 
+    var imgEl = $('question-image');
+    if (q.image) { imgEl.src = q.image; imgEl.classList.remove('hidden'); }
+    else { imgEl.removeAttribute('src'); imgEl.classList.add('hidden'); }
+
     var box = $('options');
-    box.innerHTML = q.options.map(function (opt, i) {
-      return '<button class="option" data-i="' + i + '">' +
-        '<span class="letter">' + 'ABCD'[i] + '</span><span>' + esc(opt) + '</span></button>';
-    }).join('');
+    var letters = 'ABCDEF';
+    if (q.image) {
+      box.className = 'options img-options';
+      box.innerHTML = q.options.map(function (src, i) {
+        var badge = q.baked ? '' : '<span class="letter">' + letters[i] + '</span>';
+        return '<button class="option opt-img" data-i="' + i + '">' + badge +
+          '<img src="' + src + '" alt="选项 ' + letters[i] + '"></button>';
+      }).join('');
+    } else {
+      box.className = 'options';
+      box.innerHTML = q.options.map(function (opt, i) {
+        return '<button class="option" data-i="' + i + '">' +
+          '<span class="letter">' + letters[i] + '</span><span>' + esc(opt) + '</span></button>';
+      }).join('');
+    }
     Array.prototype.forEach.call(box.querySelectorAll('.option'), function (btn) {
       btn.onclick = function () { onPick(+btn.getAttribute('data-i')); };
     });
@@ -258,8 +276,8 @@
     var mp = $('memory-phase');
     mp.classList.remove('hidden');
     $('memory-content').textContent = q.memSplit.m;
-    // 展示时长：按内容长度 4–12 秒
-    var secs = clamp(Math.ceil(q.memSplit.m.length * 0.35), 4, 12);
+    // 展示时长：按内容长度 2–6 秒（v2 减半）
+    var secs = clamp(Math.ceil(q.memSplit.m.length * 0.175), 2, 6);
     var left = secs;
     var cd = $('memory-countdown');
     cd.textContent = left + ' 秒后隐藏';
@@ -633,7 +651,7 @@
     var sec = curSection();
     if ($('memory-phase') && !$('memory-phase').classList.contains('hidden')) return;
     var k = e.key.toLowerCase();
-    var map = { a: 0, b: 1, c: 2, d: 3, '1': 0, '2': 1, '3': 2, '4': 3 };
+    var map = { a: 0, b: 1, c: 2, d: 3, e: 4, f: 5, '1': 0, '2': 1, '3': 2, '4': 3, '5': 4, '6': 5 };
     if (k in map && !$('question-area').classList.contains('hidden')) {
       var idx = map[k];
       var btns = $('options').querySelectorAll('.option');
