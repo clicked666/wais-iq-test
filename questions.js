@@ -1,6 +1,6 @@
-// 韦氏智力测试 · 55 题数据（由 site_build/build_questions.js 生成，请勿手改）
+// 韦氏智力测试 · 56 题数据（由 site_build/build_questions.js 生成，请勿手改）
 window.WAIS_TEST = {
-  meta: { title: '韦氏智力测试', questions: 55, version: '2.0' },
+  meta: { title: '韦氏智力测试', questions: 56, version: '3.0' },
   sections: [
   {
     "key": "VCI",
@@ -63,38 +63,23 @@ window.WAIS_TEST = {
     "difficulty": 1,
     "text": "狗和猫在哪些方面相似？",
     "options": [
-      "它们都是被驯化的哺乳动物",
       "它们都会叫",
       "它们都咕噜咕噜地叫",
+      "它们都是被驯化的哺乳动物",
       "它们都生活在水中"
     ],
-    "correct": 0,
+    "correct": 2,
     "memSplit": null
   },
   {
     "id": "vci-02",
-    "qid": 0,
-    "section": "VCI",
-    "difficulty": 1,
-    "text": "“好奇”是什么意思？",
-    "options": [
-      "感到疲倦和困倦",
-      "愤怒和不安",
-      "无聊和不感兴趣",
-      "渴望知道或学习一些东西"
-    ],
-    "correct": 3,
-    "memSplit": null
-  },
-  {
-    "id": "vci-03",
     "qid": 4,
     "section": "VCI",
     "difficulty": 2,
     "text": "“转瞬即逝”是什么意思？",
     "options": [
-      "永久和永恒",
       "昂贵而稀有",
+      "永久和永恒",
       "难以理解",
       "持续时间很短"
     ],
@@ -102,213 +87,183 @@ window.WAIS_TEST = {
     "memSplit": null
   },
   {
-    "id": "vci-04",
+    "id": "vci-03",
     "qid": 65,
     "section": "VCI",
     "difficulty": 2,
     "text": "小提琴和小号有什么相似之处？",
     "options": [
-      "两者都是管乐器",
-      "都是弦乐器",
       "都是乐器",
-      "都是木制的"
+      "都是弦乐器",
+      "都是木制的",
+      "两者都是管乐器"
     ],
-    "correct": 2,
+    "correct": 0,
     "memSplit": null
   },
   {
-    "id": "vci-05",
+    "id": "vci-04",
     "qid": 68,
     "section": "VCI",
     "difficulty": 3,
     "text": "“澄澈”是什么意思？",
     "options": [
-      "易于理解；透明",
       "恐怖和黑暗",
+      "易于理解；透明",
       "颜色很深，不透明",
       "极其复杂"
     ],
-    "correct": 0,
+    "correct": 1,
     "memSplit": null
   },
   {
-    "id": "vci-06",
+    "id": "vci-05",
     "qid": 71,
     "section": "VCI",
     "difficulty": 4,
     "text": "“阿谀奉承”是什么意思？",
     "options": [
-      "独立自主",
       "直率、诚实",
+      "过分顺从、刻意讨好",
       "聪明伶俐",
-      "过分顺从、刻意讨好"
-    ],
-    "correct": 0,
-    "memSplit": null
-  },
-  {
-    "id": "vci-07",
-    "qid": 74,
-    "section": "VCI",
-    "difficulty": 5,
-    "text": "“迂曲”是什么意思？",
-    "options": [
-      "清晰明了、简单易懂",
-      "直截了当",
-      "要求匆忙和紧迫",
-      "迂回曲折、错综复杂"
+      "独立自主"
     ],
     "correct": 3,
     "memSplit": null
   },
   {
-    "id": "vsi-01",
-    "qid": 76,
-    "section": "VSI",
-    "difficulty": 1,
-    "text": "一个 2×2 网格由4个小正方形组成。把任意大小的正方形都算上，包括最外面的大正方形，一共有多少个正方形？",
+    "id": "vci-06",
+    "qid": 74,
+    "section": "VCI",
+    "difficulty": 5,
+    "text": "“迂曲”是什么意思？",
     "options": [
-      "6",
-      "4",
-      "7",
-      "5"
+      "要求匆忙和紧迫",
+      "迂回曲折、错综复杂",
+      "清晰明了、简单易懂",
+      "直截了当"
+    ],
+    "correct": 1,
+    "memSplit": null
+  },
+  {
+    "id": "vsi-01",
+    "qid": 22,
+    "section": "VSI",
+    "difficulty": 2,
+    "text": "一个正方形沿它的一条对角线剪一刀。会得到哪两块？",
+    "options": [
+      "两个长方形",
+      "一个三角形和一个正方形",
+      "两个正方形",
+      "两个三角形"
     ],
     "correct": 3,
     "memSplit": null
   },
   {
     "id": "vsi-02",
-    "qid": 22,
+    "qid": 25,
     "section": "VSI",
-    "difficulty": 2,
-    "text": "一个正方形沿它的一条对角线剪一刀。会得到哪两块？",
+    "difficulty": 3,
+    "text": "字母 'J' 沿竖直轴做镜像翻转。它底部的钩现在朝向：",
     "options": [
-      "两个正方形",
-      "两个三角形",
-      "一个三角形和一个正方形",
-      "两个长方形"
+      "左",
+      "右",
+      "上",
+      "下"
     ],
     "correct": 1,
     "memSplit": null
   },
   {
     "id": "vsi-03",
-    "qid": 19,
-    "section": "VSI",
-    "difficulty": 2,
-    "text": "字母 'Z' 顺时针旋转90°。它看起来像哪个字母？",
-    "options": [
-      "N",
-      "Z",
-      "W",
-      "S"
-    ],
-    "correct": 0,
-    "memSplit": null
-  },
-  {
-    "id": "vsi-04",
-    "qid": 78,
-    "section": "VSI",
-    "difficulty": 2,
-    "text": "字母 'E' 被水平翻转（沿竖直轴做镜像）。翻转后它的三条横臂朝向哪边？",
-    "options": [
-      "右",
-      "下",
-      "左",
-      "上"
-    ],
-    "correct": 2,
-    "memSplit": null
-  },
-  {
-    "id": "vsi-05",
-    "qid": 25,
-    "section": "VSI",
-    "difficulty": 3,
-    "text": "字母 'J' 沿竖直轴做镜像翻转。它底部的钩现在朝向：",
-    "options": [
-      "下",
-      "上",
-      "右",
-      "左"
-    ],
-    "correct": 2,
-    "memSplit": null
-  },
-  {
-    "id": "vsi-06",
     "qid": 83,
     "section": "VSI",
     "difficulty": 3,
     "text": "在标准的透视图中，距离更远的物体看起来：",
     "options": [
       "更亮",
-      "更大",
       "不变",
-      "更小"
+      "更小",
+      "更大"
     ],
-    "correct": 3,
+    "correct": 2,
     "memSplit": null
   },
   {
-    "id": "vsi-07",
+    "id": "vsi-04",
     "qid": 84,
     "section": "VSI",
     "difficulty": 3,
     "text": "三个圆：A 与 B 重叠，B 与 C 重叠，但 A 和 C 不接触。有多少个重叠区域？",
     "options": [
       "5",
-      "3",
+      "2",
       "4",
-      "2"
+      "3"
     ],
-    "correct": 3,
+    "correct": 1,
     "memSplit": null
   },
   {
-    "id": "vsi-08",
+    "id": "vsi-05",
     "qid": 28,
     "section": "VSI",
     "difficulty": 4,
     "text": "立方体堆成一个小金字塔：底层是 2×2，顶上正中放1个立方体。总共有多少个立方体？",
     "options": [
-      "6",
-      "5",
+      "7",
       "4",
-      "7"
+      "5",
+      "6"
     ],
-    "correct": 1,
+    "correct": 2,
     "memSplit": null
   },
   {
-    "id": "vsi-09",
+    "id": "vsi-06",
     "qid": 86,
     "section": "VSI",
     "difficulty": 4,
     "text": "把一个图形顺时针旋转90°两次，相当于哪一次单独的旋转？",
     "options": [
-      "逆时针90°",
+      "270°",
       "180°",
       "360°",
-      "270°"
+      "逆时针90°"
     ],
     "correct": 1,
     "memSplit": null
   },
   {
-    "id": "vsi-10",
+    "id": "vsi-07",
+    "qid": 29,
+    "section": "VSI",
+    "difficulty": 4,
+    "text": "哪种正方形排列绝不可能出现在一个有效的、可折叠的立方体展开图中？",
+    "options": [
+      "三个正方形组成的 L 形",
+      "四个正方形组成的 2×2 方块",
+      "并排的两个正方形",
+      "一行四个正方形"
+    ],
+    "correct": 1,
+    "memSplit": null
+  },
+  {
+    "id": "vsi-08",
     "qid": 89,
     "section": "VSI",
     "difficulty": 5,
     "text": "取一个大写字母 'L'（竖笔在左边，底部的横脚朝右）。先旋转180°，再沿竖直轴做镜像。它现在看起来怎样？",
     "options": [
-      "竖笔在右边，底部的横脚朝左",
-      "不变：竖笔在左边，底部的横脚朝右",
       "竖笔在左边，顶部的横臂朝右",
-      "竖笔在右边，顶部的横臂朝左"
+      "竖笔在右边，顶部的横臂朝左",
+      "竖笔在右边，底部的横脚朝左",
+      "不变：竖笔在左边，底部的横脚朝右"
     ],
-    "correct": 2,
+    "correct": 0,
     "memSplit": null
   },
   {
@@ -318,91 +273,170 @@ window.WAIS_TEST = {
     "difficulty": 1,
     "text": "哪个图形的边数与正方形相同：菱形、五边形、三角形还是六边形？",
     "options": [
-      "菱形",
-      "三角形",
+      "五边形",
       "六边形",
-      "五边形"
+      "菱形",
+      "三角形"
     ],
-    "correct": 0,
+    "correct": 2,
     "memSplit": null
   },
   {
     "id": "fri-02",
+    "qid": 77,
+    "section": "FRI",
+    "difficulty": 1,
+    "text": "颜色规律交替出现：青色、橙色、青色、橙色、___。接下来是什么？",
+    "options": [
+      "橙色",
+      "绿色",
+      "蓝色",
+      "青色"
+    ],
+    "correct": 3,
+    "memSplit": null
+  },
+  {
+    "id": "fri-03",
+    "qid": 18,
+    "section": "FRI",
+    "difficulty": 1,
+    "text": "一个颜色规律每三步重复一次：紫色、蓝色、绿色、紫色、蓝色、___。接下来是什么？",
+    "options": [
+      "蓝色",
+      "绿色",
+      "红色",
+      "紫色"
+    ],
+    "correct": 1,
+    "memSplit": null
+  },
+  {
+    "id": "fri-04",
     "qid": 15,
     "section": "FRI",
     "difficulty": 1,
     "text": "这个序列交替出现：圆形、三角形、圆形、三角形、圆形、___。接下来是什么？",
     "options": [
-      "三角形",
       "菱形",
-      "正方形",
-      "圆形"
-    ],
-    "correct": 0,
-    "memSplit": null
-  },
-  {
-    "id": "fri-03",
-    "qid": 20,
-    "section": "FRI",
-    "difficulty": 2,
-    "text": "在一个 3×3 矩阵中，每一行都包含一个圆形、一个正方形和一个三角形。第三行已经有一个正方形和一个三角形。什么补全它？",
-    "options": [
       "圆形",
       "三角形",
-      "菱形",
       "正方形"
-    ],
-    "correct": 0,
-    "memSplit": null
-  },
-  {
-    "id": "fri-04",
-    "qid": 79,
-    "section": "FRI",
-    "difficulty": 2,
-    "text": "一个重复的颜色规律：蓝色、绿色、青色、蓝色、绿色、___。接下来是什么？",
-    "options": [
-      "橙色",
-      "蓝色",
-      "青色",
-      "绿色"
     ],
     "correct": 2,
     "memSplit": null
   },
   {
     "id": "fri-05",
-    "qid": 21,
+    "qid": 17,
     "section": "FRI",
-    "difficulty": 2,
-    "text": "完成类比：向上三角形之于向下三角形，正如向右三角形之于？",
+    "difficulty": 1,
+    "text": "这些图形按边数排序：3, 4, ?, 6。哪个图形填补空缺？",
     "options": [
-      "向下三角形",
-      "向右三角形",
-      "向左三角形",
-      "向上三角形"
+      "圆形",
+      "六边形",
+      "五边形",
+      "正方形"
     ],
     "correct": 2,
     "memSplit": null
   },
   {
     "id": "fri-06",
-    "qid": 26,
+    "qid": 16,
     "section": "FRI",
-    "difficulty": 3,
-    "text": "找出与众不同的一个：立方体、球体、棱锥、六边形。",
+    "difficulty": 1,
+    "text": "哪一个与众不同：正方形、长方形、三角形、菱形？",
     "options": [
-      "棱锥",
-      "六边形",
-      "球体",
-      "立方体"
+      "长方形",
+      "正方形",
+      "菱形",
+      "三角形"
+    ],
+    "correct": 3,
+    "memSplit": null
+  },
+  {
+    "id": "fri-07",
+    "qid": 21,
+    "section": "FRI",
+    "difficulty": 2,
+    "text": "完成类比：向上三角形之于向下三角形，正如向右三角形之于？",
+    "options": [
+      "向上三角形",
+      "向右三角形",
+      "向左三角形",
+      "向下三角形"
+    ],
+    "correct": 2,
+    "memSplit": null
+  },
+  {
+    "id": "fri-08",
+    "qid": 79,
+    "section": "FRI",
+    "difficulty": 2,
+    "text": "一个重复的颜色规律：蓝色、绿色、青色、蓝色、绿色、___。接下来是什么？",
+    "options": [
+      "蓝色",
+      "青色",
+      "橙色",
+      "绿色"
     ],
     "correct": 1,
     "memSplit": null
   },
   {
-    "id": "fri-07",
+    "id": "fri-09",
+    "qid": 20,
+    "section": "FRI",
+    "difficulty": 2,
+    "text": "在一个 3×3 矩阵中，每一行都包含一个圆形、一个正方形和一个三角形。第三行已经有一个正方形和一个三角形。什么补全它？",
+    "options": [
+      "三角形",
+      "菱形",
+      "圆形",
+      "正方形"
+    ],
+    "correct": 2,
+    "memSplit": null
+  },
+  {
+    "id": "fri-10",
+    "qid": 26,
+    "section": "FRI",
+    "difficulty": 3,
+    "text": "找出与众不同的一个：立方体、球体、棱锥、六边形。",
+    "options": [
+      "立方体",
+      "棱锥",
+      "六边形",
+      "球体"
+    ],
+    "correct": 2,
+    "memSplit": null
+  },
+  {
+    "id": "fri-11",
+    "qid": "iit-ex29",
+    "section": "FRI",
+    "difficulty": 2,
+    "text": null,
+    "image": "img/iit-ex29.png",
+    "options": [
+      "img/iit-ex29_a.png",
+      "img/iit-ex29_b.png",
+      "img/iit-ex29_c.png",
+      "img/iit-ex29_d.png",
+      "img/iit-ex29_e.png",
+      "img/iit-ex29_f.png"
+    ],
+    "correct": 0,
+    "memSplit": null,
+    "baked": false
+  },
+  {
+    "id": "fri-12",
     "qid": "iit-ex36",
     "section": "FRI",
     "difficulty": 2,
@@ -421,7 +455,26 @@ window.WAIS_TEST = {
     "baked": false
   },
   {
-    "id": "fri-08",
+    "id": "fri-13",
+    "qid": "iit-ex28",
+    "section": "FRI",
+    "difficulty": 3,
+    "text": null,
+    "image": "img/iit-ex28.png",
+    "options": [
+      "img/iit-ex28_a.png",
+      "img/iit-ex28_b.png",
+      "img/iit-ex28_c.png",
+      "img/iit-ex28_d.png",
+      "img/iit-ex28_e.png",
+      "img/iit-ex28_f.png"
+    ],
+    "correct": 1,
+    "memSplit": null,
+    "baked": false
+  },
+  {
+    "id": "fri-14",
     "qid": "iit-ex30",
     "section": "FRI",
     "difficulty": 3,
@@ -440,7 +493,7 @@ window.WAIS_TEST = {
     "baked": false
   },
   {
-    "id": "fri-09",
+    "id": "fri-15",
     "qid": "iit-ex34",
     "section": "FRI",
     "difficulty": 3,
@@ -459,7 +512,26 @@ window.WAIS_TEST = {
     "baked": false
   },
   {
-    "id": "fri-10",
+    "id": "fri-16",
+    "qid": "iit-ex35",
+    "section": "FRI",
+    "difficulty": 3,
+    "text": null,
+    "image": "img/iit-ex35.png",
+    "options": [
+      "img/iit-ex35_a.png",
+      "img/iit-ex35_b.png",
+      "img/iit-ex35_c.png",
+      "img/iit-ex35_d.png",
+      "img/iit-ex35_e.png",
+      "img/iit-ex35_f.png"
+    ],
+    "correct": 4,
+    "memSplit": null,
+    "baked": false
+  },
+  {
+    "id": "fri-17",
     "qid": "iit-ex39",
     "section": "FRI",
     "difficulty": 3,
@@ -478,7 +550,7 @@ window.WAIS_TEST = {
     "baked": false
   },
   {
-    "id": "fri-11",
+    "id": "fri-18",
     "qid": "iit-ex40",
     "section": "FRI",
     "difficulty": 3,
@@ -497,7 +569,7 @@ window.WAIS_TEST = {
     "baked": false
   },
   {
-    "id": "fri-12",
+    "id": "fri-19",
     "qid": "mensa-q24",
     "section": "FRI",
     "difficulty": 4,
@@ -516,7 +588,7 @@ window.WAIS_TEST = {
     "baked": true
   },
   {
-    "id": "fri-13",
+    "id": "fri-20",
     "qid": "mensa-q25",
     "section": "FRI",
     "difficulty": 4,
@@ -535,7 +607,7 @@ window.WAIS_TEST = {
     "baked": true
   },
   {
-    "id": "fri-14",
+    "id": "fri-21",
     "qid": "mensa-q31",
     "section": "FRI",
     "difficulty": 4,
@@ -554,7 +626,7 @@ window.WAIS_TEST = {
     "baked": true
   },
   {
-    "id": "fri-15",
+    "id": "fri-22",
     "qid": "iit-ex38",
     "section": "FRI",
     "difficulty": 4,
@@ -573,7 +645,7 @@ window.WAIS_TEST = {
     "baked": false
   },
   {
-    "id": "fri-16",
+    "id": "fri-23",
     "qid": "mensa-q27",
     "section": "FRI",
     "difficulty": 5,
@@ -599,11 +671,11 @@ window.WAIS_TEST = {
     "text": "记住这些数字，并按相反顺序选择：3 7 2 5 8",
     "options": [
       "5 8 2 3 7",
-      "3 7 2 5 8",
+      "8 5 2 7 3",
       "2 3 5 7 8",
-      "8 5 2 7 3"
+      "3 7 2 5 8"
     ],
-    "correct": 3,
+    "correct": 1,
     "memSplit": {
       "m": "记住这些数字：3、7、2、5、8",
       "r": "按相反顺序选择"
@@ -617,11 +689,11 @@ window.WAIS_TEST = {
     "text": "记住这些字母D M R F H | 如有要求，请倒过来拼写：",
     "options": [
       "F H R M D",
+      "D M R F H",
       "H F R M D",
-      "R M F D H",
-      "D M R F H"
+      "R M F D H"
     ],
-    "correct": 1,
+    "correct": 2,
     "memSplit": {
       "m": "记住这些字母：D、M、R、F、H",
       "r": "按相反顺序选择"
@@ -634,12 +706,12 @@ window.WAIS_TEST = {
     "difficulty": 2,
     "text": "给出：按相反顺序选择：",
     "options": [
-      "树、书、狗、月亮、汽车",
-      "月亮, 汽车, 树, 书, 狗",
       "汽车, 月亮, 书, 树, 狗",
-      "狗, 书, 树, 车, 月亮"
+      "树、书、狗、月亮、汽车",
+      "狗, 书, 树, 车, 月亮",
+      "月亮, 汽车, 树, 书, 狗"
     ],
-    "correct": 1,
+    "correct": 3,
     "memSplit": {
       "m": "记住这些词语：狗、书、树、汽车、月亮",
       "r": "按相反顺序选择"
@@ -652,12 +724,12 @@ window.WAIS_TEST = {
     "difficulty": 2,
     "text": "记住：9 2 6 1 4 | 按相反顺序选择：",
     "options": [
-      "4 1 6 2 9",
+      "1 2 4 6 9",
       "9 2 6 1 4",
       "2 1 4 6 9",
-      "1 2 4 6 9"
+      "4 1 6 2 9"
     ],
-    "correct": 0,
+    "correct": 3,
     "memSplit": {
       "m": "记住这些数字：9、2、6、1、4",
       "r": "按相反顺序选择"
@@ -670,12 +742,12 @@ window.WAIS_TEST = {
     "difficulty": 2,
     "text": "回忆字母：P Q R S T | 倒着拼写：",
     "options": [
-      "Q P S R T",
-      "P Q R S T",
       "S R T P Q",
-      "T S R Q P"
+      "T S R Q P",
+      "Q P S R T",
+      "P Q R S T"
     ],
-    "correct": 3,
+    "correct": 1,
     "memSplit": {
       "m": "记住这些字母：P、Q、R、S、T",
       "r": "按相反顺序选择"
@@ -683,48 +755,33 @@ window.WAIS_TEST = {
   },
   {
     "id": "wmi-06",
-    "qid": 96,
-    "section": "WMI",
-    "difficulty": 2,
-    "text": "32 - 14 + 6 - 5 是多少？",
-    "options": [
-      "18",
-      "21",
-      "19",
-      "20"
-    ],
-    "correct": 2,
-    "memSplit": null
-  },
-  {
-    "id": "wmi-07",
     "qid": 42,
     "section": "WMI",
     "difficulty": 3,
     "text": "记住并反向重复：4, 1, 8, 3, 9, 2",
     "options": [
+      "9 8 4 3 2 1",
       "2 9 3 8 1 4",
-      "4 1 8 3 9 2",
       "1 2 3 4 8 9",
-      "9 8 4 3 2 1"
+      "4 1 8 3 9 2"
     ],
-    "correct": 0,
+    "correct": 1,
     "memSplit": {
       "m": "记住这个序列：4、1、8、3、9、2",
       "r": "按相反顺序选择"
     }
   },
   {
-    "id": "wmi-08",
+    "id": "wmi-07",
     "qid": 100,
     "section": "WMI",
     "difficulty": 3,
     "text": "反向5 9 2 7 3 6 1 8",
     "options": [
       "8 1 6 3 7 2 9 5",
-      "9 8 7 6 5 4 3 2",
+      "5 9 2 7 3 6 1 8",
       "1 2 3 5 6 7 8 9",
-      "5 9 2 7 3 6 1 8"
+      "9 8 7 6 5 4 3 2"
     ],
     "correct": 0,
     "memSplit": {
@@ -733,63 +790,48 @@ window.WAIS_TEST = {
     }
   },
   {
-    "id": "wmi-09",
-    "qid": 98,
+    "id": "wmi-08",
+    "qid": 43,
     "section": "WMI",
-    "difficulty": 3,
-    "text": "从 50 开始倒数 6 秒。数列中的第三个数字是多少？",
+    "difficulty": 4,
+    "text": "100 - 25 - 15 + 20 是多少？",
     "options": [
-      "26",
-      "32",
-      "38",
-      "44"
+      "82",
+      "81",
+      "80",
+      "79"
     ],
     "correct": 2,
+    "memSplit": null
+  },
+  {
+    "id": "wmi-09",
+    "qid": 102,
+    "section": "WMI",
+    "difficulty": 4,
+    "text": "如果从 20 开始，乘以 3，减去 25，除以 5，然后加上 7，结果是什么？",
+    "options": [
+      "12",
+      "14",
+      "16",
+      "18"
+    ],
+    "correct": 1,
     "memSplit": null
   },
   {
     "id": "wmi-10",
-    "qid": 44,
-    "section": "WMI",
-    "difficulty": 4,
-    "text": "如果你有 5 个苹果，送出 2 个，再买 3 个，然后送出 4 个，你有多少个？",
-    "options": [
-      "4",
-      "1",
-      "2",
-      "3"
-    ],
-    "correct": 2,
-    "memSplit": null
-  },
-  {
-    "id": "wmi-11",
-    "qid": 101,
-    "section": "WMI",
-    "difficulty": 4,
-    "text": "计算：150 − 45 − 28 + 33 = ?",
-    "options": [
-      "112",
-      "108",
-      "106",
-      "110"
-    ],
-    "correct": 3,
-    "memSplit": null
-  },
-  {
-    "id": "wmi-12",
     "qid": 104,
     "section": "WMI",
     "difficulty": 5,
     "text": "高级双重任务：在求解时记住 A D K M： ((45 + 18 - 12) × 2) ÷ 3 = ?然后倒转字母。",
     "options": [
-      "A D K M（结果：35）",
       "M K D A（结果：34）",
       "A D K M（结果：34）",
-      "M K D A（结果：33）"
+      "M K D A（结果：33）",
+      "A D K M（结果：35）"
     ],
-    "correct": 1,
+    "correct": 0,
     "memSplit": {
       "m": "记住这些字母：A、D、K、M，同时心算：((45 + 18 − 12) × 2) ÷ 3 = ?",
       "r": "按相反顺序选择你记住的字母，并结合计算结果"
@@ -797,152 +839,137 @@ window.WAIS_TEST = {
   },
   {
     "id": "psi-01",
-    "qid": 46,
+    "qid": 51,
     "section": "PSI",
-    "difficulty": 1,
-    "text": "找出匹配的一对：猫 狗 蝙蝠 猫",
+    "difficulty": 2,
+    "text": "快速扫描：哪个符号出现 3 次？◆●▲ ◆◆● ▲●◆ ●▲◆",
     "options": [
-      "BAT-CAT",
-      "CAT-CAT",
-      "猫狗",
-      "狗蝙蝠"
+      "◆",
+      "一视同仁",
+      "▲",
+      "●"
     ],
-    "correct": 1,
+    "correct": 2,
     "memSplit": null
   },
   {
     "id": "psi-02",
-    "qid": 106,
+    "qid": 112,
     "section": "PSI",
-    "difficulty": 1,
-    "text": "快速匹配：苹果 橙子 苹果 香蕉",
+    "difficulty": 3,
+    "text": "下面哪一行的数字 0 最多？",
     "options": [
-      "苹果橙",
-      "橙色-香蕉",
-      "橙色-苹果",
-      "苹果-苹果"
+      "10011",
+      "10101",
+      "00100",
+      "01010"
     ],
-    "correct": 3,
+    "correct": 2,
     "memSplit": null
   },
   {
     "id": "psi-03",
-    "qid": 111,
+    "qid": 57,
     "section": "PSI",
-    "difficulty": 2,
-    "text": "快速计算：9 × 4 + 6 ÷ 2 = ?",
+    "difficulty": 3,
+    "text": "接下来是什么？A B D G K P ?",
     "options": [
-      "38",
-      "40",
-      "37",
-      "39"
+      "W",
+      "X",
+      "U",
+      "V"
     ],
     "correct": 3,
     "memSplit": null
   },
   {
     "id": "psi-04",
-    "qid": 53,
+    "qid": 54,
     "section": "PSI",
-    "difficulty": 2,
-    "text": "快速排序：哪个序列是有顺序的？3、1、4、1、5 或 1、1、3、4、5",
+    "difficulty": 3,
+    "text": "下面哪一行的数字 1 最多？",
     "options": [
-      "两者都订购了",
-      "3,1,4,1,5",
-      "也没有下令",
-      "1,1,3,4,5"
+      "11111",
+      "11101",
+      "10111",
+      "10101"
     ],
-    "correct": 3,
+    "correct": 0,
     "memSplit": null
   },
   {
     "id": "psi-05",
-    "qid": 113,
-    "section": "PSI",
-    "difficulty": 3,
-    "text": "8×7 - 20 ÷ 5 是多少？",
-    "options": [
-      "54",
-      "52",
-      "53",
-      "55"
-    ],
-    "correct": 1,
-    "memSplit": null
-  },
-  {
-    "id": "psi-06",
-    "qid": 56,
-    "section": "PSI",
-    "difficulty": 3,
-    "text": "数一数下面内容中元音字母（A、E、I、O、U）的总数：BEAUTIFUL ENVIRONMENT",
-    "options": [
-      "10",
-      "11",
-      "12",
-      "9"
-    ],
-    "correct": 3,
-    "memSplit": null
-  },
-  {
-    "id": "psi-07",
-    "qid": 114,
-    "section": "PSI",
-    "difficulty": 3,
-    "text": "快速数元音社区美丽",
-    "options": [
-      "7",
-      "10",
-      "9",
-      "8"
-    ],
-    "correct": 3,
-    "memSplit": null
-  },
-  {
-    "id": "psi-08",
-    "qid": 117,
+    "qid": 118,
     "section": "PSI",
     "difficulty": 4,
-    "text": "EDUCATION 包含多少个辅音？",
+    "text": "如果 A=1，B=2，C=3……那么 F+G+H 等于多少？",
     "options": [
-      "5",
-      "6",
-      "4",
-      "7"
+      "23",
+      "20",
+      "21",
+      "22"
     ],
     "correct": 2,
     "memSplit": null
   },
   {
-    "id": "psi-09",
+    "id": "psi-06",
+    "qid": 117,
+    "section": "PSI",
+    "difficulty": 4,
+    "text": "EDUCATION 包含多少个辅音？",
+    "options": [
+      "7",
+      "4",
+      "6",
+      "5"
+    ],
+    "correct": 1,
+    "memSplit": null
+  },
+  {
+    "id": "psi-07",
     "qid": 116,
     "section": "PSI",
     "difficulty": 4,
     "text": "如果 CAT 倒写成 TAC，那么 DOG 倒写成什么？",
     "options": [
-      "GDO",
-      "OGD",
       "DGO",
+      "OGD",
+      "GDO",
       "上帝"
     ],
     "correct": 3,
     "memSplit": null
   },
   {
-    "id": "psi-10",
+    "id": "psi-08",
+    "qid": 59,
+    "section": "PSI",
+    "difficulty": 4,
+    "text": "完成图案1, 1, 2, 3, 5, 8, 13, ?",
+    "options": [
+      "21",
+      "23",
+      "20",
+      "22"
+    ],
+    "correct": 0,
+    "memSplit": null
+  },
+  {
+    "id": "psi-09",
     "qid": 119,
     "section": "PSI",
     "difficulty": 5,
     "text": "2、4、8、16、32、64 的下一个数是多少？再把它乘以 4。",
     "options": [
-      "512",
       "256",
       "128",
-      "384"
+      "384",
+      "512"
     ],
-    "correct": 0,
+    "correct": 3,
     "memSplit": null
   }
 ]
